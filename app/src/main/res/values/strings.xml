@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">StudentScheduler</string>
+    <string name="terms">Terms</string>
+    <string-array name="status_array">
+        <item>In Progress</item>
+        <item>Completed</item>
+        <item>Dropped</item>
+        <item>Plan To Take</item>
+    </string-array>
+    <string-array name="type_array">
+        <item>Objective</item>
+        <item>Performance</item>
+        <item>Pre-Assessment</item>
+        <item>Other</item>
+    </string-array>
+</resources>

@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CourseDetailedActivity"
+    tools:layout_editor_absoluteY="81dp">
+
+    <TextView
+        android:id="@+id/courseTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Course Title"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="15dp"
+        android:text="Start Date:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView25" />
+
+    <TextView
+        android:id="@+id/textView21"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="11dp"
+        android:text="End Date:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView20" />
+
+    <TextView
+        android:id="@+id/courseStartDate"
+        android:layout_width="wrap_content"
+        android:layout_height="15dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="14dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/courseEndDate"
+        app:layout_constraintStart_toStartOf="@+id/courseStatus"
+        app:layout_constraintTop_toBottomOf="@+id/courseStatus" />
+
+    <TextView
+        android:id="@+id/courseEndDate"
+        android:layout_width="60dp"
+        android:layout_height="21dp"
+        android:layout_marginBottom="43dp"
+        android:layout_marginTop="43dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/textView24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/alertStart" />
+
+    <ListView
+        android:id="@+id/lvAssessmentsInCourse"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="21dp"
+        android:layout_marginEnd="21dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="29dp"
+        app:layout_constraintBottom_toTopOf="@+id/button5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView24" />
+
+    <TextView
+        android:id="@+id/textView24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="45dp"
+        android:text="Assessments:"
+        app:layout_constraintStart_toStartOf="@+id/lvAssessmentsInCourse"
+        app:layout_constraintTop_toBottomOf="@+id/textView21" />
+
+    <Spinner
+        android:id="@+id/addAssessmentSpinner"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="21dp"
+        app:layout_constraintBottom_toTopOf="@+id/lvAssessmentsInCourse"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView28"
+        app:layout_constraintTop_toBottomOf="@+id/alertEnd" />
+
+    <TextView
+        android:id="@+id/textView25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="58dp"
+        android:text="Status:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/courseStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="23dp"
+        android:text="courseStatus"
+        app:layout_constraintEnd_toEndOf="@+id/courseTitle"
+        app:layout_constraintTop_toBottomOf="@+id/courseTitle" />
+
+    <Button
+        android:id="@+id/btnNotes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="28dp"
+        android:layout_marginTop="21dp"
+        android:onClick="toNotes"
+        android:text="Notes"
+        app:layout_constraintEnd_toEndOf="@+id/lvAssessmentsInCourse"
+        app:layout_constraintTop_toBottomOf="@+id/lvAssessmentsInCourse" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="21dp"
+        android:layout_marginStart="19dp"
+        android:onClick="toMentor"
+        android:text="Add Mentor"
+        app:layout_constraintBottom_toTopOf="@+id/textView28"
+        app:layout_constraintStart_toStartOf="@+id/lvAssessmentsInCourse" />
+
+    <ListView
+        android:id="@+id/lvMentors"
+        android:layout_width="0dp"
+        android:layout_height="183dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="448dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView28"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:layout_marginStart="22dp"
+        android:text="Mentors"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/lvMentors"
+        app:layout_constraintStart_toEndOf="@+id/button5" />
+
+    <CheckBox
+        android:id="@+id/alertStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:text="Alert"
+        app:layout_constraintBottom_toTopOf="@+id/alertEnd"
+        app:layout_constraintStart_toEndOf="@+id/courseStartDate" />
+
+    <CheckBox
+        android:id="@+id/alertEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="61dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="64dp"
+        android:text="Alert"
+        app:layout_constraintBottom_toTopOf="@+id/lvAssessmentsInCourse"
+        app:layout_constraintStart_toStartOf="@+id/alertStart"
+        app:layout_constraintTop_toTopOf="@+id/courseStatus" />
+
+</android.support.constraint.ConstraintLayout>
+</ScrollView>
