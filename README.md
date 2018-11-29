@@ -1,4 +1,4 @@
-# Student-Planner
+# Grad-Planner
 A student planner built in Android Studio
 
 
